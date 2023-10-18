@@ -28,4 +28,4 @@ jobs:
           java-version: '11'
 
       - name: build Java Code
-        uses: mvn clean package
+        run: mvn clean package

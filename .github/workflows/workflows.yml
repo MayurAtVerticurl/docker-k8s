@@ -1,21 +1,21 @@
 name: cicd
 
-on: 
-  push: 
-    branches: 
+on:
+  push:
+    branches:
       - master
-  workflow_dispatch: 
+  workflow_dispatch:
 
-jobs: 
-  cicd: 
+jobs:
+  cicd:
     runs-on: ubuntu-latest
 
-    steps: 
-    - name: checkout
-      uses: actions/checkout@v4
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
       
-    - name: Lint Code Base
-      uses: super-linter/super-linter@v5
+      - name: Lint Code Base
+        uses: super-linter/super-linter@v5
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main

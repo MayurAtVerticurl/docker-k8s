@@ -22,7 +22,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.WRKFLW_TOKEN }}
 
       - name: setup java
-      - uses: actions/setup-java@v3
+        uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '11'

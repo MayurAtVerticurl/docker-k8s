@@ -45,8 +45,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and Push
-        uses: docker/build-push-action@v5
-        with:
-          push: true
-          tags: mayuratverticurl/javaapp:latest
+      - name: Push to DockerHub
+        run: docker push mayuratverticurl/javaapp:latest

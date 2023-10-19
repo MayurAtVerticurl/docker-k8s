@@ -61,3 +61,8 @@ jobs:
 
       - name: Push to DockerHub
         run: docker push mayuratverticurl/javaapp:latest
+
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.7.0
+        with:
+          target: 'https://www.zaproxy.org/'
